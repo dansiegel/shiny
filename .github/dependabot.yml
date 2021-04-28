@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 3
+  target-branch: dev
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: Acr.UserDialogs
+    versions:
+    - 7.1.0.466
+    - 7.1.0.475
+  - dependency-name: Xamarin.AndroidX.AppCompat
+    versions:
+    - 1.2.0.6
